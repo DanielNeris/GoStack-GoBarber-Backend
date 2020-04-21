@@ -105,7 +105,9 @@ dist/
 .dynamodb/
 
 # Temporary folders
-tmp/
-temp/
+tmp/*
+!tmp/.gitkeep
+temp/*
+!temp/.gitkeep
 
 yarn.lock
