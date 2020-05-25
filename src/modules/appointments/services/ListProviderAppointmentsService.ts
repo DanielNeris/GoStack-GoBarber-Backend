@@ -44,8 +44,6 @@ class ListProviderAppointmentsService {
         },
       );
 
-      console.log('dsahuduhasudsdkmmm');
-
       await this.cacheProvider.save(cacheKey, appointments);
     }
 
