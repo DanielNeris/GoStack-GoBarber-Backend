@@ -21,10 +21,14 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn
 
-      - name: Run Tests
+      - name: Check tests
         run: yarn test --coverage
-        env:
-          CI: true
+
+      - name: Check linting
+        run: yarn lint
+
+      - name: Check commit message
+        uses: wagoid/commitlint-github-action@v2
