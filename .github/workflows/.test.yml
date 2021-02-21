@@ -3,25 +3,25 @@ name: Test
 on:
   pull_request:
     branches:
-    - master
+      - master
 
   jobs:
     build:
       runs-on: ubunt-latest
 
       steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+        - name: Checkout repository
+          uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
+        - name: Install Node.js
+          uses: actions/setup-node@v1
+          with:
+            node-version: 12.x
 
-      - name: Install Dependencies
+        - name: Install Dependencies
           run: yarn
 
-      - name: Run Tests
+        - name: Run Tests
           run: yarn test
           env:
             CI: true
