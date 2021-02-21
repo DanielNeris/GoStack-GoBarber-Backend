@@ -5,23 +5,23 @@ on:
     branches:
       - master
 
-  jobs:
-    build:
-      runs-on: ubunt-latest
+jobs:
+  build:
+    runs-on: ubunt-latest
 
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-        - name: Install Node.js
-          uses: actions/setup-node@v1
-          with:
-            node-version: 12.x
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
 
-        - name: Install Dependencies
-          run: yarn
+      - name: Install Dependencies
+        run: yarn
 
-        - name: Run Tests
-          run: yarn test
-          env:
-            CI: true
+      - name: Run Tests
+        run: yarn test
+        env:
+          CI: true
