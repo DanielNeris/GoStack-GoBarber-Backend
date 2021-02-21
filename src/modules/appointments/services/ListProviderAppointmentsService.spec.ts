@@ -19,7 +19,6 @@ describe('ListProviderAppointments', () => {
 
   const year = new Date().getFullYear() + 1;
 
-
   it('should be able to list the appointements on a specific day', async () => {
     const appointement1 = await fakeAppointmentsRepository.create({
       provider_id: 'provider',
