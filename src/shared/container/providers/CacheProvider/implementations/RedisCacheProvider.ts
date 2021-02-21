@@ -10,6 +10,7 @@ export default class RedisCacheProvider implements ICacheProvider {
     this.client = new Redis(cacheConfig.config.redis);
   }
 
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   public async save(key: string, value: any): Promise<void> {
     await this.client.set(key, JSON.stringify(value));
   }
