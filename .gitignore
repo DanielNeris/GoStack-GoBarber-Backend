@@ -110,6 +110,4 @@ tmp/*
 temp/*
 !temp/.gitkeep
 
-yarn.lock
-
 ormconfig.json
